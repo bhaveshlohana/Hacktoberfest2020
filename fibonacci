@@ -1,0 +1,10 @@
+# Program to display the Fibonacci sequence up to n-th term using dynamic programming...
+
+n = int(input())
+
+#create a dp array
+dp = [0]*(n+1)       #initialize all elements with 0
+dp[1] = 1       #to follow the series of 0, 1, 1, 2... we first initialize the first two elements as 0 and 1
+for i in range(2, n+1):
+	dp[i] = dp[i-1] + dp[i-2]     #we now follow the pattern for fibonacci, that is, F(n) = F(n-1) + F(n-2)
+print(dp[n])
